@@ -12,5 +12,5 @@ public class BaseEntity
 
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
-    public Guid Id { get; }
+    public Guid Id { get; set; }
 }
