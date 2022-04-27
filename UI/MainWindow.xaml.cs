@@ -121,7 +121,10 @@ namespace UI
             var cashVouchersRepository = new CashVouchersRepository();
 
             var newTextConsole = new StringBuilder();
-            foreach (var cashVoucher in cashVouchersRepository.GetAll())
+
+            var cashVouchers = cashVouchersRepository.GetAll().ToList();
+
+            foreach (var cashVoucher in cashVouchers)
             {
                 newTextConsole.Append($"Чек номер {cashVoucher.Number} в смене {cashVoucher.Shift.Number}\n");
             }

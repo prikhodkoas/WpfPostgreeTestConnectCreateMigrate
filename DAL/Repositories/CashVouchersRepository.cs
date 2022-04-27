@@ -5,10 +5,10 @@ namespace DAL.Services;
 
 public class CashVouchersRepository : RootRepository<CashVoucher>, ICashVouchersRepository
 {
-    public IQueryable<CashVoucher> GetAll()
-    {
-        return _context.CashVouchers.Include(p => p.Shift);
-    }
+    //public IQueryable<CashVoucher> GetAll()
+    //{
+    //    return _context.CashVouchers.Include(p => p.Shift);
+    //}
 
     public Guid Insert(CashVoucher cashVoucher)
     {

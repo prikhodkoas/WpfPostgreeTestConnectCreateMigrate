@@ -7,9 +7,6 @@ namespace DAL.Entities
         [DisplayName("Номер чека")]
         public int Number { get; set; }
 
-        [DisplayName("ID смены")]
-        public Guid? ShiftId { get; set; }
-
         //[InverseProperty("CashVouchers")]
         public virtual Shift Shift { get; set; }
     }
