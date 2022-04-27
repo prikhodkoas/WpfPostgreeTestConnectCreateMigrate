@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    public class Shift
+    public class Shift : BaseEntity
     {
-        public int Id { get; set; }
-
         [DisplayName("Номер смены")]
         public int Number { get; set; }
 

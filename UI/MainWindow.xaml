@@ -26,8 +26,13 @@
                     </Grid.RowDefinitions>
 
                     <Label Grid.Column="0" Grid.Row="0" Margin="0, 5, 0, 0" Padding="2">Номер смены:</Label>
-                    <TextBox Grid.Column="1" Grid.Row="0" Margin="0, 5, 0, 0" Padding="2"></TextBox>
-                    <Button Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0, 5, 0, 0">Добавить смену</Button>
+                    <TextBox Name="tBoxShiftNumberFromAddShift" Grid.Column="1" Grid.Row="0" Margin="0, 5, 0, 0" Padding="2"></TextBox>
+                    <Button
+                        Name="butAddShift"
+                        Click="ButAddShift_OnClick"
+                        Grid.Row="1" Grid.ColumnSpan="2"
+                        HorizontalAlignment="Stretch"
+                        Margin="0, 5, 0, 0">Добавить смену</Button>
                 </Grid>
             </GroupBox>
             <GroupBox Header="Добавить смену" Margin="5" Padding="5">
@@ -44,14 +49,33 @@
                     </Grid.RowDefinitions>
                     
                     <Label Grid.Column="0" Grid.Row="0" Margin="0, 5, 0, 0" Padding="2">Номер Чека:</Label>
-                    <TextBox Grid.Column="1" Grid.Row="0" Margin="0, 5, 0, 0" Padding="2"></TextBox>
+                    <TextBox Name="tBoxNumberCheque" Grid.Column="1" Grid.Row="0" Margin="0, 5, 0, 0" Padding="2"></TextBox>
                     <Label Grid.Column="0" Grid.Row="1" Margin="0, 5, 0, 0" Padding="2">Номер смены:</Label>
-                    <TextBox Grid.Column="1" Grid.Row="1" Margin="0, 5, 0, 0" Padding="2"></TextBox>
-                    <Button Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0, 5, 0, 0">Добавить смену</Button>
+                    <TextBox Name="tBoxShiftNumberFromAddCheque"  Grid.Column="1" Grid.Row="1" Margin="0, 5, 0, 0" Padding="2"></TextBox>
+                    <Button
+                        Name="butAddCheque"
+                        Click="ButAddCheque_OnClick"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        HorizontalAlignment="Stretch"
+                        Margin="0, 5, 0, 0">Добавить чек</Button>
                 </Grid>
             </GroupBox>
         </StackPanel>
-
-        <TextBox Grid.Column="1" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Margin="5"></TextBox>
+        
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button
+                Name="butGetAllCheques"
+                Click="ButGetAllCheques_OnClick"
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                Padding="7, 3"
+                Margin="5, 5, 5, 0">Получить все чеки</Button>
+            <TextBox Name="tBoxConsole" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Margin="5"></TextBox>
+        </Grid>
     </Grid>
 </Window>

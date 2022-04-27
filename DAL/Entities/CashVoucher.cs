@@ -2,10 +2,8 @@
 
 namespace DAL.Entities
 {
-    public class CashVoucher
+    public class CashVoucher : BaseEntity
     {
-        public int Id { get; set; }
-
         [DisplayName("Номер чека")]
         public int Number { get; set; }
 

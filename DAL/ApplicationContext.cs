@@ -5,7 +5,7 @@ namespace DAL
 {
     public class ApplicationContext : DbContext
     {
-        public DbSet<Shift> Shifts { get; set; }
+        public DbSet<Shift?> Shifts { get; set; }
         public DbSet<CashVoucher> CashVouchers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
