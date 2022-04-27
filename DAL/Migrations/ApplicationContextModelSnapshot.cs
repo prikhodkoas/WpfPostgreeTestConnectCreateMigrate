@@ -24,17 +24,14 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.Entities.CashVoucher", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
 
                     b.Property<int>("Number")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("ShiftId")
-                        .HasColumnType("integer");
+                    b.Property<Guid?>("ShiftId")
+                        .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
@@ -45,11 +42,8 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.Entities.Shift", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
 
                     b.Property<int>("Number")
                         .HasColumnType("integer");

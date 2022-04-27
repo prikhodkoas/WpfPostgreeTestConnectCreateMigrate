@@ -20,13 +20,13 @@ public class RootRepository<T> : IRootRepository<T> where T : BaseEntity
         // return _context.Set<T>
     }
 
-    public T GetById(int id)
+    public T GetById(Guid id)
     {
         return _entities.FirstOrDefault(p => p.Id == id);
         //return _context.Set<T>.FirstOrDefault(p => p.Id == id);
     }
 
-    public int Insert(T entity)
+    public Guid Insert(T entity)
     {
         if (entity == null)
         {
@@ -48,9 +48,9 @@ public class RootRepository<T> : IRootRepository<T> where T : BaseEntity
         }
     }
 
-    public bool DeleteById(int id)
+    public bool DeleteById(Guid id)
     {
-        if (id < 0)
+        if (id == Guid.Empty)
         {
             throw new ArgumentOutOfRangeException(nameof(id));
         }

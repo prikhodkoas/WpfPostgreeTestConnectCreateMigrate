@@ -5,8 +5,8 @@ namespace DAL.Services;
 public interface ICashVouchersRepository
 {
     IQueryable<CashVoucher> GetAll();
-    CashVoucher GetById(int id);
-    int Insert(CashVoucher entity);
+    CashVoucher GetById(Guid id);
+    Guid Insert(CashVoucher entity);
     void Update(CashVoucher entity);
-    bool DeleteById(int id);
+    bool DeleteById(Guid id);
 }

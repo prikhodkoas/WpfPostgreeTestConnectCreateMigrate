@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DAL.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220426104357_Initial")]
-    partial class Initial
+    [Migration("20220427114621_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,17 +26,14 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.Entities.CashVoucher", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
 
                     b.Property<int>("Number")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("ShiftId")
-                        .HasColumnType("integer");
+                    b.Property<Guid?>("ShiftId")
+                        .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
@@ -47,11 +44,8 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.Entities.Shift", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
 
                     b.Property<int>("Number")
                         .HasColumnType("integer");

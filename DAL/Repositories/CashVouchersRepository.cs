@@ -10,7 +10,7 @@ public class CashVouchersRepository : RootRepository<CashVoucher>, ICashVouchers
         return _context.CashVouchers.Include(p => p.Shift);
     }
 
-    public int Insert(CashVoucher cashVoucher)
+    public Guid Insert(CashVoucher cashVoucher)
     {
         if (cashVoucher == null)
         {

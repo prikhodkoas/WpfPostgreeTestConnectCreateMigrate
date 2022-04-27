@@ -4,9 +4,9 @@ namespace DAL.Services;
 
 internal interface IRootRepository<T> where T : BaseEntity
 {
-    public IQueryable<T> GetAll();
-    public T GetById(int id);
-    public int Insert(T entity);
-    public void Update(T entity);
-    public bool DeleteById(int id);
+    IQueryable<T> GetAll();
+    T GetById(Guid id);
+    Guid Insert(T entity);
+    void Update(T entity);
+    bool DeleteById(Guid id);
 }
