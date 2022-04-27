@@ -25,7 +25,7 @@
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public Guid Id { get; }
+        public Guid Id { get; set; }
     }
 ```
 ##### 5. Создал две сущности Shift и CashVoucher унаследованные от BaseEntity
