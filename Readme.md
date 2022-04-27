@@ -207,6 +207,10 @@
 ```
 
 >Для того что бы при запросе всех чеков, возвращались так же и смены внутри объектов CashVoucher. Необходимо добавить их при выборке. В данном случае используется жадная загрузка с использованием Include.
+>> В ветке LazyLoad показан вариант с ленивой загрузкой
+>>
+>> При ленивой загрузке, в проект DAL нужно доустановить через nuget пакет Microsoft.EntityFrameworkCore.Proxies .
+>> В данном случае был установлен этот пакет версии 6.0.4
 
 ```
     public class CashVouchersRepository : RootRepository<CashVoucher>, ICashVouchersRepository
