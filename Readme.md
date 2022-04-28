@@ -1,6 +1,7 @@
 ### Создание структуры проекта
 ##### 1. Создал проект WPF, desctop, Core 6.0 с именем проекта ( UI )
 ##### 2. Создал библиотеку, Core 6.0 с именем проекта ( DAL )
+##### 3. В проекте UI добавил ссылку на проект DAL
 ### БД
 ##### 1. В слой DAL, через nuget установил Npgsql.EntityFrameworkCore.PostgreSQL версии 6,0,4
 ##### 2. В слой DAL, через nuget установил Microsoft.EntityFrameworkCore.Tools версии 6,0,4
